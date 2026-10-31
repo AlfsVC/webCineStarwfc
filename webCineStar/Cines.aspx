@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CineStar.Master" AutoEventWireup="true" CodeBehind="Cines.aspx.cs" Inherits="webCineStar.Cines" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/CineStar.Master" AutoEventWireup="true" CodeBehind="Cines.aspx.cs" Inherits="webCineStar.Cines" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
@@ -17,7 +17,7 @@
                          Teléfono: <%#Eval("Telefonos") %></span>
                  </div>
                  <br />
-                 <a href="verCine.aspx?idCine=<%#Eval("id") %>">
+                 <a href="Cine.aspx?idCine=<%#Eval("id") %>">
                      <img src="img/varios/ico-info2.png" width="150" height="40" />
                  </a>
              </div>

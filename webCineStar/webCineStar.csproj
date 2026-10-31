@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -71,9 +71,9 @@
   <ItemGroup>
     <Content Include="Cine.aspx" />
     <Content Include="Cines.aspx" />
-    <None Include="Connected Services\wcfCineStarcines\configuration91.svcinfo" />
-    <None Include="Connected Services\wcfCineStarcines\configuration.svcinfo" />
-    <None Include="Connected Services\wcfCineStarcines\Reference.svcmap">
+    <None Include="Connected Services\wcfCineStarCines\configuration91.svcinfo" />
+    <None Include="Connected Services\wcfCineStarCines\configuration.svcinfo" />
+    <None Include="Connected Services\wcfCineStarCines\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -95,12 +95,16 @@
     <Content Include="img\cine\5.3.jpg" />
     <Content Include="img\cine\6.1.jpg" />
     <Content Include="img\cine\6.2.jpg" />
+    <Content Include="img\cine\6.3.jpg" />
     <Content Include="img\cine\7.1.jpg" />
     <Content Include="img\cine\7.2.jpg" />
+    <Content Include="img\cine\7.3.jpg" />
     <Content Include="img\cine\8.1.jpg" />
     <Content Include="img\cine\8.2.jpg" />
+    <Content Include="img\cine\8.3.jpg" />
     <Content Include="img\cine\9.1.jpg" />
     <Content Include="img\cine\9.2.jpg" />
+    <Content Include="img\cine\9.3.jpg" />
     <Content Include="img\pelicula\1.jpg" />
     <Content Include="img\pelicula\10.jpg" />
     <Content Include="img\pelicula\11.jpg" />
@@ -137,6 +141,8 @@
     <Content Include="img\varios\logo-cinestar.png" />
     <Content Include="img\varios\starcard.jpg" />
     <Content Include="inicio.aspx" />
+    <Content Include="Pelicula.aspx" />
+    <Content Include="Peliculas.aspx" />
     <Content Include="Web.config" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
   </ItemGroup>
@@ -162,12 +168,14 @@
     <Compile Include="CineStar.Master.designer.cs">
       <DependentUpon>CineStar.Master</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\wcfCineStarcines\Reference.cs">
+    <Compile Include="Connected Services\wcfCineStarCines\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="dao\CineDAO.cs" />
     <Compile Include="dao\CinesDAO.cs" />
+    <Compile Include="dao\PeliculasDAO.cs" />
     <Compile Include="inicio.aspx.cs">
       <DependentUpon>inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,18 +183,32 @@
     <Compile Include="inicio.aspx.designer.cs">
       <DependentUpon>inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pelicula.aspx.cs">
+      <DependentUpon>Pelicula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pelicula.aspx.designer.cs">
+      <DependentUpon>Pelicula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Peliculas.aspx.cs">
+      <DependentUpon>Peliculas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Peliculas.aspx.designer.cs">
+      <DependentUpon>Peliculas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CineStar.Master" />
-    <None Include="Connected Services\wcfCineStarcines\CineStarService.wsdl" />
-    <None Include="Connected Services\wcfCineStarcines\CineStarService.xsd">
+    <None Include="Connected Services\wcfCineStarCines\CineStarService.wsdl" />
+    <None Include="Connected Services\wcfCineStarCines\CineStarService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\wcfCineStarcines\CineStarService1.xsd">
+    <None Include="Connected Services\wcfCineStarCines\CineStarService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\wcfCineStarcines\CineStarService2.xsd">
+    <None Include="Connected Services\wcfCineStarCines\CineStarService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -201,7 +223,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\wcfCineStarcines\" />
+    <WCFMetadataStorage Include="Connected Services\wcfCineStarCines\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

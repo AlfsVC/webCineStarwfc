@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CineStar.master.cs" Inherits="webCineStar.CineStar" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CineStar.master.cs" Inherits="webCineStar.CineStar" %>
 
 <!DOCTYPE html>
 
@@ -23,7 +23,7 @@
         		<a href="http://www.cinestar.com.pe/contactenos/#contenido_titulo" class="anchorLink">Contáctenos</a>
         </nav>
         <div class="area-logo">
-            <a href="Inicio.aspx">
+            <a href="inicio.aspx">
                 <img src="img/varios/logo-cinestar.png" /></a>
         </div>
         <nav class="menu">
@@ -35,8 +35,8 @@
             </span>
             <span class="social">Síguenos en: </span>
             <ul class="menu-principal">
-                <li class="menu-item"><a href="verPeliculas.aspx?idPeliculas=1">Cartelera</a></li>
-                <li class="menu-item"><a href="verPeliculas.aspx?idPeliculas=2">Próximos estrenos</a></li>
+                <li class="menu-item"><a href="Peliculas.aspx?idPeliculas=1">Cartelera</a></li>
+                <li class="menu-item"><a href="Peliculas.aspx?idPeliculas=2">Próximos estrenos</a></li>
                 <li class="menu-item"><a href="http://www.cinestar.com.pe/starcard">Star Card</a></li>
                 <li class="menu-item"><a href="Cines.aspx">Nuestros Cines</a></li>
                 <li class="menu-item"><a href="http://www.cinestar.com.pe/ventas_corporativas">Ventas Corporativas</a></li>
